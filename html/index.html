@@ -5,9 +5,10 @@
   <title>Mądry Dach - Blacharstwo artystyczne</title>
   <meta charset="UTF-8">
   <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-  <!-- <link rel="stylesheet" type="text/css" href="../JAVASCRIPT/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css" />
-  <link rel="stylesheet" type="text/css" href="../JAVASCRIPT/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css" /> -->
-  <link rel="stylesheet" type="text/css" href="../css/style.css" />
+  <link rel="stylesheet" type="text/css" href="../js/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css" />
+  <link rel="stylesheet" type="text/css" href="../js/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css" />
+	<link rel="stylesheet" type="text/css" href="../css/style.css" />
+	
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet">
@@ -38,5 +39,25 @@
 				<img class="header-main__image" src="../Images/dachpngpng bardzo.png">
 				<img class="header-main__name" src="../Images/Nazwa.png">
 		</div>
+		<div class="owl-carousel owl-theme">
+				<div class="carousel__item"><img src="../Images/Karuzela1.jpg"></div>
+				<div class="carousel__item"><img src="../Images/Karuzela2.jpg"></div>
+				<div class="carousel__item"><img src="../Images/Karuzela3.jpg"></div>
+				<div class="carousel__item"><img src="../Images/Karuzela4.jpg"></div>
+				<div class="carousel__item"><img src="../Images/Karuzela5.jpg"></div>
+			</div>
 	</header>
 </body>
+<script src="../js/OwlCarousel2-2.3.4/docs/assets/vendors/jquery.min.js"></script>
+<script src="../js/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+<script>
+		$('.owl-carousel').owlCarousel({
+			// center: true,
+			loop: true,
+			margin: 25,
+			items: 1,
+			autoplay:true,
+  	  autoplayTimeout:4000,
+   	  autoplayHoverPause:true
+		})
+	</script>
