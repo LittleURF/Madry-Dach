@@ -121,12 +121,11 @@ body {
     height: 75px;
     border-right: 1px solid rgb(202, 202, 202);
     border-left: 1px solid rgb(201, 201, 201);
-    margin-bottom: 30px;
   } 
 
   .owl-carousel {
       width: 50%;
-      margin: 30px auto 0px auto;
+      margin: 20px auto 0px auto;
 
   }
 
@@ -172,6 +171,16 @@ body {
     color: var(--brown);
   }
 
+  .description__text {
+    width: 60%;
+    margin: 0 auto;
+    font-size: 2.6em;
+    font-family: 'Quicksand';
+    text-align: center;
+    letter-spacing: 0.9px;
+    word-spacing: 2.2px;
+
+  }
   .last-work {
     margin-top: 40px;
     height: 700px;
@@ -183,8 +192,9 @@ body {
     text-align: center;
   }
   .highlight--centered {
+    display: inline;
     font-size: 2.8em;
-
+    border-bottom: 2px solid var(--brown);
   }
 
   .last-work__list {
@@ -273,29 +283,23 @@ body {
   }
 
   .about-us {
-    height: 700px;
     background-color: rgb(250, 250, 250);
   }
 
-  .about-us__text-wrapper--left {
-    background-color: rgb(228, 228, 228); /* TODO*/
-    width: 55%;
-    position: absolute;
-    left: 0;
-    border-bottom-right-radius: 100px;
-    border-top-right-radius: 5px;
-    font-size: 1.9em;
-    min-height: 300px;
-  }
-
-  .sticked--right {
+  .about-us__row{
+    display: flex;
     width: 70%;
-    float: right;
-    padding: 15px 15px 35px 0px;
+    margin: 0 auto;
+    font-size: 1.9em;
+    padding-bottom: 55px;
   }
 
-  .about-us__image--right {
-    position: relative;
-    left: 60%;
-    width: 30%;
+  .about-us__text {
+
+    padding: 10px;
+    text-align: center;
+  }
+  .about-us__image {
+    height: 350px;
+    border-radius: 8px;
   }
