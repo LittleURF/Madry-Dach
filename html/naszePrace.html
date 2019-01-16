@@ -45,31 +45,38 @@
 		</div>
 		<div class="gallery">
 				<ul class="gallery__list">
-					<li>1</li>
-					<li>2</li>
-					<li>3</li>
-					<li>4</li>
-					<li>5</li>
-					<li>6</li>
-					<li>7</li>
-					<li>8</li>
-					<li>9</li>
-					<li>10</li>
-					<li>11</li>
-					<li>12</li>
-					<li>13</li>
-					<li>14</li>
+					<li onclick="changeImgSet(0, 18)">Moje Prace</li>
+					<li onclick="changeImgSet(1, 4)">Wodozbiór w Łazienkach Królewskich w Warszawie 2018</li>
+					<li onclick="changeImgSet(2, 5)">Rynek starego miasta 27 w Warszawie 2018</li>
+					<li onclick="changeImgSet(3, 3)">Obrzeża w Łazienkach Królewskich 2018</li>
+					<li onclick="changeImgSet(4, 6)">Kaweczyńska 16 Warszawa 2018</li>
+					<li onclick="changeImgSet(5, 2)">Pałac w Wilanowie (część północna) 2017</li>
+					<li onclick="changeImgSet(6, 4)">Stare miasto w Warszawie (Piwna 44, 46) 2016</li>
+					<li onclick="changeImgSet(7, 4)">Stare miasto w Warszawie (ul.Piwna 28 30, Wąski Dunaj) 2016</li>
+					<li onclick="changeImgSet(8, 6)">Stare miasto w Warszawie (Piwna 20, 22, 24, 26 2015</li>
+					<li onclick="changeImgSet(9, 4)">Pałac Mysiliwice w Łazienkach Królewskich 2014</li>
+					<li onclick="changeImgSet(10, 2)">Teatr Komedia w Warszawie 2015</li>
+					<li onclick="changeImgSet(11, 3)">Ministerstwo finansów 2015</li>
+					<li onclick="changeImgSet(12, 4)">Pałac chrabiego Krautza  w Kościelcu 2008</li>
+					<li onclick="changeImgSet(13, 3)">Akademia muzyczna w Łodzi 2007</li>
+					<li onclick="changeImgSet(14, 1)">Pałac w Wilanowie 2006</li>
+					<li onclick="changeImgSet(15, 2)">Akademia sztuk pieknych (Krakowskie Przedmiescie) 2004</li>
+					<li onclick="changeImgSet(16, 2)">Pałac Czapskich (Krakowskie Przedmiescie) 2004</li>
+					<li onclick="changeImgSet(17, 2)">Stara dziekanka (ul.Bednarska ) 1996</li>
+					<li onclick="changeImgSet(18, 1)">Uniwersytet warszawski (ul.Długa) 1995</li>
+					<li onclick="changeImgSet(19, 3)">Szkoła teatralna (ul.Miodowa - Warszawa ) 1993</li>
+					<li onclick="changeImgSet(20, 1)">Stara Dziekanka (Krakowskie Przedmiescie) 1989</li>
 				</ul>
 			<div class="gallery__photos-wrapper">
-				<div class="gallery__photos">
-					<a class="gallery__photo" data-lightbox="praca" href="../Images/oNas2.JPG"><img src="../Images/oNas2.JPG"></a>
-					<a class="gallery__photo" data-lightbox="praca" href="../Images/oNas2.JPG"><img src="../Images/oNas2.JPG"></a>
-					<a class="gallery__photo" data-lightbox="praca" href="../Images/oNas2.JPG"><img src="../Images/oNas2.JPG"></a>
-					<a class="gallery__photo" data-lightbox="praca" href="../Images/oNas2.JPG"><img src="../Images/oNas2.JPG"></a>
-					<a class="gallery__photo" data-lightbox="praca" href="../Images/oNas2.JPG"><img src="../Images/oNas2.JPG"></a>
-					<a class="gallery__photo" data-lightbox="praca" href="../Images/oNas2.JPG"><img src="../Images/oNas2.JPG"></a>
-					<a class="gallery__photo" data-lightbox="praca" href="../Images/oNas2.JPG"><img src="../Images/oNas2.JPG"></a>
-					<a class="gallery__photo" data-lightbox="praca" href="../Images/oNas2.JPG"><img src="../Images/oNas2.JPG"></a>
+				<div id="gallery__photos">
+					<a class="gallery__photo" data-lightbox="prace" href="../Images/oNas2.JPG"><img src="../Images/oNas2.JPG"></a>
+					<a class="gallery__photo" data-lightbox="prace" href="../Images/oNas2.JPG"><img src="../Images/oNas2.JPG"></a>
+					<a class="gallery__photo" data-lightbox="prace" href="../Images/oNas2.JPG"><img src="../Images/oNas2.JPG"></a>
+					<a class="gallery__photo" data-lightbox="prace" href="../Images/oNas2.JPG"><img src="../Images/oNas2.JPG"></a>
+					<a class="gallery__photo" data-lightbox="prace" href="../Images/oNas2.JPG"><img src="../Images/oNas2.JPG"></a>
+					<a class="gallery__photo" data-lightbox="prace" href="../Images/oNas2.JPG"><img src="../Images/oNas2.JPG"></a>
+					<a class="gallery__photo" data-lightbox="prace" href="../Images/oNas2.JPG"><img src="../Images/oNas2.JPG"></a>
+					<a class="gallery__photo" data-lightbox="prace" href="../Images/oNas2.JPG"><img src="../Images/oNas2.JPG"></a>
 					
 				</div>
 			</div>
@@ -86,6 +93,47 @@
 <script src="../js/OwlCarousel2-2.3.4/docs/assets/vendors/jquery.min.js"></script>
 <script src="../js/lightbox.js"></script>
 <script>
+const gallery = document.getElementById('gallery__photos');
 
+function changeImgSet(imgSet, itemAmount) {
+	clearGallery();
+	loadNewSet(imgSet, itemAmount);
+}
+
+function loadNewSet(imgSet, itemAmount) {
+	var imgExists = true;
+	for(let i = 1; imgExists && i <= itemAmount; i++){
+		addBox(imgSet, i, itemAmount);
+	}
+}
+
+function addBox(imgSet, imgNumber) {
+	let newBox = document.createElement('a');
+	const imgUrl = "../Images/Gallery/" + imgSet + "/" + imgNumber + ".jpg";
+	newBox.href = imgUrl;
+	newBox.className = "gallery__photo";
+	newBox.setAttribute('data-lightbox', 'prace');
+
+	let newBoxImg = document.createElement('img');
+	newBoxImg.src = imgUrl; 
+
+	newBox.appendChild(newBoxImg);
+	gallery.appendChild(newBox);
+	
+	// Cant do anything to actually change anything outside this function or stop it,
+	// newBoxImg.onerror = function(){
+	// 	imgExists = false;
+	// }
+}
+
+function clearGallery() {
+	
+	while (gallery.firstChild) {
+    gallery.removeChild(gallery.firstChild);
+}
+}
+
+
+// 
 </script>
 </html>
