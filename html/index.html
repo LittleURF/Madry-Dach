@@ -4,7 +4,7 @@
 <head>
   <title>Mądry Dach - Blacharstwo artystyczne</title>
   <meta charset="UTF-8">
-  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="../js/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css" />
   <link rel="stylesheet" type="text/css" href="../js/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css" />
 	<link rel="stylesheet" type="text/css" href="../css/style.css" />
@@ -17,7 +17,7 @@
 	<nav class="nav-bar">
 	  <div class="nav-bar__content">
 	      <a class="nav-bar__logo" href="index.html"><img src="../Images/NazwaBialaPNG.png"></a>
-	      <!-- <label class="hamburger__label" for="hamburger__toggle">
+	      <label class="hamburger__label" for="hamburger__toggle">
 	        <div id="hamburger__icon">
 	          <span></span>
 	          <span></span>
@@ -25,7 +25,7 @@
 	          <span></span>
 	        </div>
 	      </label>
-	      <input type="checkbox" id="hamburger__toggle"> -->
+	      <input type="checkbox" id="hamburger__toggle">
 	      <ul class="nav-bar__list">
 	        <li class="nav-bar__item"><a class="nav-bar__link" href="index.html">Strona główna</a></li>
 	        <li class="nav-bar__item"><a class="nav-bar__link" href="oNas.html">O nas</a></li>
@@ -59,16 +59,16 @@
 		</div>
 		<div class="last-work__list">
 			<div class="last-work__list__item">
-					<img src="../Images/OstatniaPraca1.jpg">
-					<span class="last-work__item__title">Szkoła teatralna ul. Miodowa Warszawa</span>
+					<img src="../Images/Gallery/1/1.jpg">
+					<span class="last-work__item__title">Wodozbiór w Łazienkach Królewskich</span>
 			</div>
 			<div class="last-work__list__item">
-					<img src="../Images/OstatniaPraca2.jpg">
-					<span class="last-work__item__title">Uniwersytet Warszawski</span>
+					<img src="../Images/Gallery/2/1.jpg">
+					<span class="last-work__item__title">Rynek Starego Miasta 27 w Warszawie</span>
 			</div>
 			<div class="last-work__list__item">
-				<img src="../Images/OstatniaPraca3.jpg">
-				<span class="last-work__item__title">Akademia Sztuk Pięknych - Krakowskie Przedmieście</span>
+				<img src="../Images/Gallery/3/1.JPG">
+				<span class="last-work__item__title">Obrzeża w Łazienkach Królewskich</span>
 			</div>
 		</div>
 		<div class="buttons">
@@ -86,6 +86,7 @@
 <script src="../js/OwlCarousel2-2.3.4/docs/assets/vendors/jquery.min.js"></script>
 <script src="../js/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
 <script>
+		// CAROUSEL
 		$('.owl-carousel').owlCarousel({
 			// center: true,
 			loop: true,
@@ -95,5 +96,13 @@
   	  autoplayTimeout:4000,
    	  autoplayHoverPause:true
 		})
+
+		// MOBILE NAV
+
+		$(document).ready(function(){
+			$('#hamburger__icon').click(function(){
+			$(this).toggleClass('open');
+		});
+});
 </script>
 </html>

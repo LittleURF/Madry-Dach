@@ -82,7 +82,15 @@
 			</div>
 		</footer>
 </body>
-<script>
+<script> 
+	// MOBILE NAV
+
+	$(document).ready(function(){
+		$('#hamburger__icon').click(function(){
+		$(this).toggleClass('open');
+	});
+});
+	// MAP
   function initMap() {
     var location = {
       lat: 52.260386,
