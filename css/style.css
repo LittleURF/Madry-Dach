@@ -31,6 +31,11 @@ body {
     margin: 0 auto;
   }
 
+  .body-wrapper {
+    min-height: 95vh;
+    position: relative;
+    background-color: rgb(250, 250, 250);
+  }
 
 .nav-bar {
     position: fixed;
@@ -131,7 +136,7 @@ body {
   .nav-bar__logo img {
       position: relative;
       top: 5%;
-      height: 90%;
+      height: 40%;
   }
   
   .nav-bar__list {
@@ -178,10 +183,10 @@ body {
   }
 
   .header-main__image {
-      height: 165px;
+      height: 90px;
   }
   .header-main__name{
-    height: 75px;
+    height: 45px;
     border-right: 1px solid rgb(202, 202, 202);
     border-left: 1px solid rgb(201, 201, 201);
   } 
@@ -211,8 +216,8 @@ body {
     font-family: 'Quicksand';
     font-weight: lighter;
     text-align: center;
-    font-size: 8.8em;
-    letter-spacing: 4.9px;
+    font-size: 6.6em;
+    letter-spacing: 3.9px;
     margin-bottom: 55px;
     display: inline;
     padding-bottom: 8px;
@@ -224,8 +229,8 @@ body {
     font-family: 'Quicksand';
     font-weight: lighter;
     text-align: center;
-    font-size: 8.8em;
-    letter-spacing: 4.9px;
+    font-size: 5.5em;
+    letter-spacing: 2.9px;
   }
 
   .description--highlight {
@@ -239,7 +244,6 @@ body {
     font-size: 2.6em;
     font-family: 'Quicksand';
     text-align: center;
-    letter-spacing: 0.9px;
     word-spacing: 2.2px;
 
   }
@@ -249,7 +253,7 @@ body {
   }
 
   .text--centered-wrapper {
-    padding: 15px 0px 35px 0px;
+    padding: 15px 0px 15px 0px;
     text-align: center;
   }
   .highlight--centered {
@@ -350,20 +354,24 @@ body {
 
   .about-us__row{
     display: flex;
-    width: 70%;
+    width: 90%;
+    flex-wrap: wrap;
     margin: 0 auto;
-    font-size: 1.9em;
+    font-size: 1.7em;
     padding-bottom: 55px;
   }
 
   .about-us__text {
-
     padding: 10px;
     text-align: center;
   }
   .about-us__image {
-    height: 350px;
+
+    max-width: 90%;
+    height: auto;
+    max-height: 300px;
     border-radius: 8px;
+    margin: 0 auto;
   }
 
   .our-works {
@@ -371,18 +379,35 @@ body {
   }
 
   .gallery {
-    width: 80%;
-    display: flex;
+    width: 90%;
     margin: 0 auto;
     background-color: rgb(238, 238, 238);
   }
+  .gallery__list__dropdown {
+    color: rgb(99, 99, 99);
+    
+  }
+
+  .dropdown__trigger {
+    background-color: rgb(238, 238, 238);
+    text-align: center;
+    font-size: 2.5em;
+  }
+  .gallery__list__dropdown:hover {
+    cursor: pointer;
+  }
+  .gallery__list__dropdown:hover .gallery__list {
+    display: block;
+  }
 
   .gallery__list {
+    display: none;
     box-sizing: border-box;
     list-style-position: inside;
     font-size: 1.7em;
     padding: 10px;
     flex-basis: 25%;
+    background-color: rgb(238, 238, 238);
   }
 
   .gallery__list > li {
@@ -401,6 +426,14 @@ body {
     flex-basis: 75%;
   }
 
+  #photos__title {
+    font-size: 2.3em;
+    text-align: center;
+    padding: 15px 0px 30px;
+    font-style: italic;
+    font-family: 'Quicksand';
+  }
+
   #gallery__photos {
     display: flex;
     flex-wrap: wrap;
@@ -409,7 +442,8 @@ body {
   }
 
   .gallery__photo {
-    height: 300px;
+    height: 250px;
+    
     margin-bottom: 20px;
     transition: all 1s;
     overflow: hidden;
@@ -419,6 +453,7 @@ body {
 
   .gallery__photo > img {
     height: 100%;
+    max-width: 350px;
     border-radius: 4px;
     transform: scale(1);
     transition: all 0.4s;
@@ -460,6 +495,7 @@ body {
 
   }
   .contact__image {
+    display: none;
     height: 600px;
   }
 
@@ -468,7 +504,7 @@ body {
     margin: 0 auto;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: 40%;
+    width: 91%;
     background-color: rgb(51, 51, 51);
     padding: 10px;
     border-radius: 3px;
@@ -535,6 +571,9 @@ body {
   .footer-main {
     height: 70px;
     background-color: rgb(46, 46, 46);
+    position: absolute;
+    bottom: -70px;
+    width: 100%;
   }
 
   .footer__content {
@@ -544,7 +583,7 @@ body {
     justify-content: space-between;
     align-items: center;
     height: 70px;
-    font-size: 1.8em;
+    font-size: 1.35em;
     color: rgb(240, 240, 240);
   }
 
@@ -562,6 +601,11 @@ body {
     .nav-bar {
       position: initial;
     }
+
+    .nav-bar__logo > img {
+      height: 90%;
+    }
+
     .nav-bar__list {
       float: right;
       visibility: visible;
@@ -609,10 +653,21 @@ body {
     
     .header-main__image-wrapper {
       margin-top: 15px;
+      height: 165px;
+  }
+
+  .header-main__name{
+    height: 75px;
+  } 
+
+  .header__description {
+    font-size: 8.8em;
+    letter-spacing: 4.9px;
   }
 
   .description__text {
     width: 60%;
+    letter-spacing: 0.9px;
   }
   
   .last-work__list {
@@ -622,10 +677,26 @@ body {
   .last-work__list__item {
     width: 45%;
   }
+
+  .text--centered-wrapper {
+    padding-bottom: 35px;
+  }
+
   .footer__content {
+    font-size: 1.9em;
     width: 65%;
   }
+  .contact__row {
+    width: 91%;
   }
+  .contact__image {
+    display: initial;
+  }
+  .contact__form {
+    width: 65%;
+  }
+}
+
   @media only screen and (min-width: 1080px) {
     .nav-bar__content {
       width: 75%;
@@ -638,8 +709,43 @@ body {
     .last-work__list__item {
       width: 32%;
     }
+    .about-us__row { 
+      width: 80%;
+      flex-wrap: nowrap;
   }
 
+    .about-us__image {
+      max-height: 350px;
+    }
+  
+    .gallery {
+      width: 90%;
+      display: flex;
+    }
+    .gallery__list {
+      display: block;
+      font-size: 1.7em;
+      flex-basis: 25%;
+    }
+    .gallery__photo {
+      height: 300px;
+    }
+
+    .dropdown__trigger {
+      display: none;
+    }
+
+    .gallery__list__dropdown:hover {
+      cursor: initial;
+    }
+    .nav-bar__link {
+      font-size: 2.1em;
+    }
+
+    .contact__form {
+      width: 40%;
+    }
+  }
 
   @media only screen and (min-width: 1440px) {
     .nav-bar__content {
@@ -651,4 +757,16 @@ body {
       justify-content: space-between;
     }
 
+    .about-us__row { 
+      width: 70%;
+      flex-wrap: nowrap;
   }
+
+  .gallery {
+    width: 70%;
+  }
+
+  .contact__row {
+    width: 60%;
+  }
+}
