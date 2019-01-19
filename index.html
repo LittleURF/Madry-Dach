@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en-EN">
+
+<head>
+  <title>Mądry Dach - Blacharstwo artystyczne</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="../js/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css" />
+  <link rel="stylesheet" type="text/css" href="../js/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css" />
+	<link rel="stylesheet" type="text/css" href="../css/style.css" />
+	<link href="https://fonts.googleapis.com/css?family=Quicksand:300" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet">
+</head>
+<body>
+	<div class="body-wrapper">
+	<nav class="nav-bar">
+	  <div class="nav-bar__content">
+	      <a class="nav-bar__logo" href="index.html"><img src="../Images/NazwaBialaPNG.png"></a>
+	      <label class="hamburger__label" for="hamburger__toggle">
+	        <div id="hamburger__icon">
+	          <span></span>
+	          <span></span>
+	          <span></span>
+	          <span></span>
+	        </div>
+	      </label>
+	      <input type="checkbox" id="hamburger__toggle">
+	      <ul class="nav-bar__list">
+	        <li class="nav-bar__item"><a class="nav-bar__link" href="index.html">Strona główna</a></li>
+	        <li class="nav-bar__item"><a class="nav-bar__link" href="oNas.html">O nas</a></li>
+	        <li class="nav-bar__item"><a class="nav-bar__link" href="naszePrace.html">Nasze prace</a></li>
+	        <li class="nav-bar__item"><a class="nav-bar__link" href="kontakt.html">Kontakt</a></li>
+	      </ul>
+	  </div>
+	</nav>
+	<header class="header-main">
+		<div class="header-main__image-wrapper">
+				<img class="header-main__image" src="../Images/dachpngpng bardzo.png">
+				<img class="header-main__name" src="../Images/Nazwa.png">
+		</div>
+		<div class="owl-carousel owl-theme">
+				<div class="carousel__item"><img src="../Images/images Resized/Karuzela1.jpg"></div>
+				<div class="carousel__item"><img src="../Images/images Resized/Karuzela2.jpg"></div>
+				<div class="carousel__item"><img src="../Images/images Resized/Karuzela3.jpg"></div>
+				<div class="carousel__item"><img src="../Images/images Resized/Karuzela4.jpg"></div>
+				<div class="carousel__item"><img src="../Images/images Resized/Karuzela5.jpg"></div>
+			</div>
+			<h1 class="header__description"><span class="description--highlight">R</span>zemiosło <span class="description--highlight">B</span>lacharskie</h1>
+			<p class="description__text">Rzemiosło blacharskie to nasza tradycja rodzinna - tego typu usługi
+				świadczymy już od  czterech pokoleń. Dzięki temu zdobyliśmy nie tylko
+				ogromne doświadczenie, ale przede wszystkim zadowolenie i zaufanie naszych
+				klientów. 
+				</p>
+	</header>
+	<section class="last-work">
+		<div class="text--centered-wrapper">
+			<h2 class="highlight--centered">Nasze najnowsze prace</h2>
+		</div>
+		<div class="last-work__list">
+			<div class="last-work__list__item">
+					<img src="../Images/Gallery/1/1.jpg">
+					<span class="last-work__item__title">Wodozbiór w Łazienkach Królewskich</span>
+			</div>
+			<div class="last-work__list__item">
+					<img src="../Images/Gallery/2/1.jpg">
+					<span class="last-work__item__title">Rynek Starego Miasta 27 w Warszawie</span>
+			</div>
+			<div class="last-work__list__item">
+				<img src="../Images/Gallery/3/1.JPG">
+				<span class="last-work__item__title">Obrzeża w Łazienkach Królewskich</span>
+			</div>
+		</div>
+		<div class="buttons">
+				<a href="naszePrace.html"><button class="btn gallery-btn">Zobacz więcej</button></a>
+				<a href="kontakt.html"><button class="btn contact-btn">Skontaktuj się z nami</button></a>
+		</div>
+	</section>
+	<footer class="footer-main">
+		<div class="footer__content">
+			<p>Mądry Dach - Blacharstwo artystyczne</p>
+			<p><svg class="svg-phone"xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="footer__feather"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg> +48 516 563 078</p>
+		</div>
+	</footer>
+	</div>
+</body>
+<script src="../js/OwlCarousel2-2.3.4/docs/assets/vendors/jquery.min.js"></script>
+<script src="../js/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+<script>
+		// CAROUSEL
+		$('.owl-carousel').owlCarousel({
+			// center: true,
+			loop: true,
+			margin: 25,
+			items: 1,
+			autoplay:true,
+  	  autoplayTimeout:4000,
+   	  autoplayHoverPause:true
+		})
+
+		// MOBILE NAV
+
+		$(document).ready(function(){
+			$('#hamburger__icon').click(function(){
+			$(this).toggleClass('open');
+		});
+});
+</script>
+</html>
