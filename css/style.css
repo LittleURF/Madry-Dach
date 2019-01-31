@@ -619,8 +619,7 @@ body {
   } 
 
   .header__description {
-    font-size: 8.8em;
-    letter-spacing: 4.9px;
+    width: 80%;
   }
 
   .description__text {
@@ -710,6 +709,12 @@ body {
       width: 65%;
     }
 
+    .header__description {
+      width: 65%;
+      font-size: 6.8em;
+      letter-spacing: 4px;
+    }
+
     .last-work__list {
       width: 65%;
       justify-content: space-between;
@@ -728,4 +733,5 @@ body {
   .contact__row {
     width: 60%;
   }
+
 }
