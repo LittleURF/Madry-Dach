@@ -71,8 +71,8 @@ body {
     display: block;
     width: 60px;
     float: right;
-    margin-right: 45px;
-    top: -5px;
+    margin-right: 25px;
+    top: -2px;
     height: 45px;
     position: relative;
     transform: rotate(0deg);
@@ -195,12 +195,12 @@ body {
   } 
 
   .owl-carousel {
-      width: 80%;
+      width: 100%;
       margin: 20px auto 0px auto;
   }
 
   .carousel__item {
-      height: 260px;
+      height: 180px;
       border-radius: 7px;
       border: 1px solid black;
       background-color: gray;
@@ -232,7 +232,7 @@ body {
     font-family: 'Quicksand';
     font-weight: lighter;
     text-align: center;
-    font-size: 5.5em;
+    font-size: 4.5em;
     letter-spacing: 2.9px;
   }
 
@@ -248,6 +248,7 @@ body {
     font-family: 'Quicksand';
     text-align: center;
     word-spacing: 2.2px;
+    padding: 20px 0px;
 
   }
   .text--centered-wrapper {
@@ -327,7 +328,7 @@ body {
 
     max-width: 90%;
     height: auto;
-    max-height: 300px;
+    max-height: 250px;
     border-radius: 8px;
     margin: 0 auto;
   }
@@ -618,7 +619,16 @@ body {
     height: 75px;
   } 
 
+  .owl-carousel {
+    width: 80%;
+  }
+
+  .carousel__item {
+    height: 260px;
+  }
+
   .header__description {
+    font-size: 5.5em;
     width: 80%;
   }
 
@@ -627,12 +637,8 @@ body {
     letter-spacing: 0.9px;
   }
   
-  .last-work__list {
-    width: 85%;
-    justify-content: space-around;
-  }
-  .last-work__list__item {
-    width: 45%;
+  .about-us__image {
+    max-height: 300px;
   }
 
   .text--centered-wrapper {
