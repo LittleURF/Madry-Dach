@@ -402,21 +402,21 @@ body {
   }
 
   .gallery__photo {
-    height: 250px;
-    
     margin-bottom: 20px;
     transition: all 1s;
     overflow: hidden;
-    border: 1px solid rgba(107, 107, 107, 0.493);
-    border-radius: 4px;
+
   }
 
   .gallery__photo > img {
-    height: 100%;
-    max-width: 350px;
+    max-height: 100%;
+    max-width: 300px;
     border-radius: 4px;
+    filter: blur(0.4px);
     transform: scale(1);
     transition: all 0.4s;
+    border: 1px solid rgba(107, 107, 107, 0.493);
+    border-radius: 4px;
   }
 
   .gallery__photo > img:hover {
@@ -425,6 +425,7 @@ body {
   }
   .contact {
     background-color: rgb(236, 236, 236);
+    padding-bottom: 50px;
   }
 
   .contact__row {
@@ -526,7 +527,7 @@ body {
 
   #map {
     height: 400px;
-    margin-top: 50px;
+
   }
 
   .footer-main {
@@ -657,6 +658,14 @@ body {
   }
   .contact__form {
     width: 65%;
+  }
+
+  .gallery__photo {
+    height: 300px;
+    max-height: initial;
+  }
+  .gallery__photo > img {
+    max-width: initial;
   }
 }
 
