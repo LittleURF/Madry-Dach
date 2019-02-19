@@ -238,7 +238,7 @@ body {
 
   .description--highlight {
     font-weight: bold;
-    color: var(--brown);
+    font-size: 125%;
   }
 
   .description__text {
