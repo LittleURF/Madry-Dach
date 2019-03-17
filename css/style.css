@@ -313,11 +313,11 @@ body {
 
   .about-us__row{
     display: flex;
-    width: 90%;
+    width: 100%;
     flex-wrap: wrap;
     margin: 0 auto;
     font-size: 1.7em;
-    padding-bottom: 55px;
+    padding-bottom: 40px;
   }
 
   .about-us__text {
@@ -325,12 +325,17 @@ body {
     text-align: center;
   }
   .about-us__image {
-
-    max-width: 90%;
-    height: auto;
-    max-height: 250px;
+    max-height: 220px;
     border-radius: 8px;
     margin: 0 auto;
+  }
+
+  .about-us__image1 {
+    margin-top: 15px;
+  }
+
+  .about-us__image2 {
+    margin-bottom: 15px;
   }
 
   .our-works {
@@ -536,25 +541,39 @@ body {
     position: absolute;
     bottom: -70px;
     width: 100%;
+    text-align: center;
   }
 
   .footer__content {
     display: flex;
+    flex-wrap: wrap;
     width: 95%; 
     margin: 0 auto;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     height: 70px;
-    font-size: 1.35em;
+    font-size: 1.25em;
     color: rgb(240, 240, 240);
   }
 
+  .footer__name {
+    flex-basis: 100%;
+  }
   .svg-phone {
     position: relative;
     top: 1px;
     right: 3px;
   }
 
+  @media only screen and (min-width: 400px) {
+    .about-us__image {
+      max-width: 90%;
+      max-height: 250px;
+    }
+
+    .about-us__row{
+      width: 90%;
+  }
   @media only screen and (min-width: 768px) {
     .hamburger__label {
       display: none;
@@ -647,9 +666,17 @@ body {
   }
 
   .footer__content {
-    font-size: 1.9em;
-    width: 65%;
+    font-size: 1.6em;
+    width: 80%;
+    flex-wrap: nowrap;
+    justify-content: space-between;
   }
+
+  .footer__name {
+    flex-basis: initial;
+  }
+
+
   .contact__row {
     width: 91%;
   }
@@ -717,6 +744,9 @@ body {
     .contact__form {
       width: 40%;
     }
+
+    .footer__content {
+      width: 65%;
   }
 
   @media only screen and (min-width: 1440px) {
