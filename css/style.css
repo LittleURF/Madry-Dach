@@ -378,13 +378,22 @@ body {
   .gallery__list > li {
     margin-bottom: 10px;
     border-bottom: 1px solid rgb(209, 209, 209);
-    color: rgb(99, 99, 99);
+    color: rgb(27, 27, 27);
+    font-weight: 600;
+    list-style: none;
   }
 
   .gallery__list > li:hover {
     color: rgb(0, 0, 0);
     cursor: pointer;
     border-bottom-color: black;
+  }
+
+  .gallery__date-place {
+    color: rgb(105, 105, 105);
+    font-size: 85%;
+    font-weight: initial;
+
   }
 
   .gallery__photos-wrapper {
