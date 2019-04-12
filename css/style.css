@@ -401,10 +401,10 @@ body {
   }
 
   #photos__title {
-    font-size: 2.3em;
+    font-size: 2.4em;
     text-align: center;
     padding: 15px 0px 30px;
-    font-style: italic;
+
     font-family: 'Quicksand';
   }
 
@@ -538,11 +538,6 @@ body {
   
   .form__submit-button:hover {
     color: orange;
-  }
-
-  #map {
-    height: 400px;
-
   }
 
   .footer-main {
