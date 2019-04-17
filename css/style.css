@@ -393,7 +393,6 @@ body {
     color: rgb(105, 105, 105);
     font-size: 85%;
     font-weight: initial;
-
   }
 
   .gallery__photos-wrapper {
@@ -579,6 +578,7 @@ body {
     .about-us__row{
       width: 90%;
   }
+}
   @media only screen and (min-width: 768px) {
     .hamburger__label {
       display: none;
@@ -752,6 +752,8 @@ body {
 
     .footer__content {
       width: 65%;
+  }
+
   }
 
   @media only screen and (min-width: 1440px) {
