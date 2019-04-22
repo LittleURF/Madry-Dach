@@ -720,6 +720,8 @@ body {
 
     .about-us__image {
       max-height: 350px;
+      /* Height IS NOT USELESS, fixes firefox*/
+      height: 300px;
     }
   
     .gallery {
