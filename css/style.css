@@ -21,6 +21,48 @@ time, mark, audio, video {
 :root {
   --brown: rgb(170, 131, 2);
 }
+
+/* quicksand-300 - latin */
+@font-face {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 300;
+  src: url('fonts/quicksand-v9-latin-300.eot'); /* IE9 Compat Modes */
+  src: local('Quicksand Light'), local('Quicksand-Light'),
+       url('fonts/quicksand-v9-latin-300.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/quicksand-v9-latin-300.woff2') format('woff2'), /* Super Modern Browsers */
+       url('fonts/quicksand-v9-latin-300.woff') format('woff'), /* Modern Browsers */
+       url('fonts/quicksand-v9-latin-300.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('fonts/quicksand-v9-latin-300.svg#Quicksand') format('svg'); /* Legacy iOS */
+}
+
+/* open-sans-regular - latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('open-sans-v16-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Open Sans Regular'), local('OpenSans-Regular'),
+       url('open-sans-v16-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('open-sans-v16-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('open-sans-v16-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('open-sans-v16-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('open-sans-v16-latin-regular.svg#OpenSans') format('svg'); /* Legacy iOS */
+}
+
+/* oxygen-regular - latin */
+@font-face {
+  font-family: 'Oxygen';
+  font-style: normal;
+  font-weight: 400;
+  src: url('oxygen-v8-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Oxygen Regular'), local('Oxygen-Regular'),
+       url('oxygen-v8-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('oxygen-v8-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('oxygen-v8-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('oxygen-v8-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('oxygen-v8-latin-regular.svg#Oxygen') format('svg'); /* Legacy iOS */
+}
 body {
     background-color: rgb(230, 230, 230);
     font-size: 62.5%;

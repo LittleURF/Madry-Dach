@@ -2,7 +2,6 @@
 <html lang="pl-PL">
 <head>
 	<!-- TODO
-	Fonts
 	meta description
 	stuff with images
 	-->
@@ -15,14 +14,11 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
 	<link rel="shortcut icon" href="Images/TitleIcon.ico">
 	<link href="css/lightbox.css" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Quicksand:300" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Oxygen|Quicksand:300" rel="stylesheet">
 	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
 	<script>
-		const observer = lozad();
-		observer.observe();
+		const observer = lozad(); // lazy loads elements with default selector as '.lozad'
+	  observer.observe();
 	</script>
 </head>
 <body>
@@ -53,11 +49,11 @@
 				<img class="header-main__name" src="Images/Nazwa.png" alt="Logo firmy2">
 		</div>
 		<div class="owl-carousel owl-theme">
-				<div class="carousel__item"><img src="Images/ImagesResized/Karuzela1.jpg" alt="Praca pokazowa"></div>
-				<div class="carousel__item"><img src="Images/ImagesResized/Karuzela2.jpg" alt="Praca pokazowa"></div>
-				<div class="carousel__item"><img src="Images/ImagesResized/Karuzela3.jpg" alt="Praca pokazowa"></div>
-				<div class="carousel__item"><img src="Images/ImagesResized/Karuzela4.jpg" alt="Praca pokazowa"></div>
-				<div class="carousel__item"><img src="Images/ImagesResized/Karuzela5.jpg" alt="Praca pokazowa"></div>
+				<div class="carousel__item "><img src="Images/ImagesResized/Karuzela1.jpg" alt="Praca pokazowa"></div>
+				<div class="carousel__item "><img src="Images/ImagesResized/Karuzela2.jpg" alt="Praca pokazowa"></div>
+				<div class="carousel__item "><img src="Images/ImagesResized/Karuzela3.jpg" alt="Praca pokazowa"></div>
+				<div class="carousel__item "><img src="Images/ImagesResized/Karuzela4.jpg" alt="Praca pokazowa"></div>
+				<div class="carousel__item "><img src="Images/ImagesResized/Karuzela5.jpg" alt="Praca pokazowa"></div>
 			</div>
 			<h1 class="header__description"><span class="description--highlight">B</span>lacharstwo <span class="description--highlight">D</span>achowe i <span class="description--highlight">A</span>rtystyczne</h1>
 			<p class="description__text">Rzemiosło blacharskie to nasza tradycja rodzinna - tego typu usługi
@@ -166,7 +162,7 @@
 			madrydach@poczta.fm
 		</p>
 		</div>
-		<img class="contact__image lozad" src="Images/wizytowka.png" alt="Wizytówka">
+		<img class="contact__image" src="Images/wizytowka.png" alt="Wizytówka">
 	</div>
 	<div class="text--centered-wrapper">
 		<h2 class="highlight--centered">Napisz do nas!</h2>
@@ -254,13 +250,14 @@ function loadNewSet(imgSet, itemAmount) {
 	for(let i = 1; imgExists && i <= itemAmount; i++){
 		addBox(imgSet, i);
 	}
+	observer.observe();
 }
 
 function addBox(imgSet, imgNumber) {
 	let newBox = document.createElement('a');
 	const imgUrl = "Images/Gallery/" + imgSet + "/" + imgNumber + ".jpg";
 	newBox.href = imgUrl;
-	newBox.className = "gallery__photo";
+	newBox.className = "gallery__photo lozad";
 	newBox.setAttribute('data-lightbox', 'prace');
 	newBox.setAttribute('alt', 'Praca pokazowa');
 
