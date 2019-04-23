@@ -19,7 +19,6 @@
 	<script>
 		const observer = lozad(); // lazy loads elements with default selector as '.lozad'
 	  observer.observe();
-		
 	</script>
 </head>
 <body>
@@ -99,7 +98,7 @@
 	<div class="text--centered-wrapper">
 		<h2 class="headline--big"><span class="description--highlight">G</span>aleria</h2>
 	</div>
-	<div class="gallery" id="gallery">
+	<div class="gallery">
 		<div class="gallery__list__dropdown"><p id="dropdown__trigger">Wybierz Pracę</p>
 			<ul id="listJS" class="gallery__list">
 				<li onclick="changeImgSet(0, 16,'Moje Prace')">Moje Prace</li>
@@ -187,6 +186,12 @@
 <script src="js/OwlCarousel2-2.3.4/docs/assets/vendors/jquery.min.js"></script>
 <script src="js/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
 <script>
+	window.onload = function() {
+    if(!window.location.hash) {
+        window.location = window.location + '#loaded';
+        window.location.reload();
+    }
+}
 		// CAROUSEL
 		$('.owl-carousel').owlCarousel({
 			// center: true,
@@ -247,16 +252,12 @@ function changeImgSet(imgSet, itemAmount, title) {
 }
 
 function loadNewSet(imgSet, itemAmount) {
-	$( "#gallery" ).load(window.location.href + " #gallery" );
+
+
 	var imgExists = true;
 	for(let i = 1; imgExists && i <= itemAmount; i++){
 		addBox(imgSet, i);
 	}
-}
-
-function updateDiv()
-{ 
-    
 }
 
 function addBox(imgSet, imgNumber) {
