@@ -231,6 +231,28 @@ const sectionTitle = document.getElementById('photos__title');
 const list = document.getElementById('listJS');
 const chooseWorkBtn = document.getElementById('dropdown__trigger');
 
+
+
+
+
+
+
+$(document).ready(function() {
+
+$("#refresh").click(function() {
+	 $("#gallery").load("index.html");
+
+return false;
+});
+});
+
+
+
+
+
+
+
+
 // VV This here makes mobile works list appear on click/hover
 chooseWorkBtn.addEventListener('click', function(){list.style="";});
 chooseWorkBtn.addEventListener('mouseover', function(){list.style="";});
@@ -282,7 +304,7 @@ function clearGallery() {
 	while (gallery.firstChild) {
     gallery.removeChild(gallery.firstChild);
 }
-}
+}z
 
 };
 
