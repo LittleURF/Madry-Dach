@@ -186,12 +186,6 @@
 <script src="js/OwlCarousel2-2.3.4/docs/assets/vendors/jquery.min.js"></script>
 <script src="js/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
 <script>
-	window.onload = function() {
-    if(!window.location.hash) {
-        window.location = window.location + '#loaded';
-        window.location.reload();
-    }
-}
 		// CAROUSEL
 		$('.owl-carousel').owlCarousel({
 			// center: true,
@@ -252,12 +246,11 @@ function changeImgSet(imgSet, itemAmount, title) {
 }
 
 function loadNewSet(imgSet, itemAmount) {
-
-
 	var imgExists = true;
 	for(let i = 1; imgExists && i <= itemAmount; i++){
 		addBox(imgSet, i);
 	}
+	observer.observe();
 }
 
 function addBox(imgSet, imgNumber) {
@@ -276,6 +269,7 @@ function addBox(imgSet, imgNumber) {
 
 	newBox.appendChild(newBoxImg);
 	gallery.appendChild(newBox);
+	observer.observe();
 	// Cant do anything to actually change anything outside this function or stop it,
 	// newBoxImg.onerror = function(){
 	// 	imgExists = false;
