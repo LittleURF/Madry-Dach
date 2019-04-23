@@ -19,6 +19,7 @@
 	<script>
 		const observer = lozad(); // lazy loads elements with default selector as '.lozad'
 	  observer.observe();
+		
 	</script>
 </head>
 <body>
@@ -98,7 +99,7 @@
 	<div class="text--centered-wrapper">
 		<h2 class="headline--big"><span class="description--highlight">G</span>aleria</h2>
 	</div>
-	<div class="gallery">
+	<div class="gallery" id="gallery">
 		<div class="gallery__list__dropdown"><p id="dropdown__trigger">Wybierz Pracę</p>
 			<ul id="listJS" class="gallery__list">
 				<li onclick="changeImgSet(0, 16,'Moje Prace')">Moje Prace</li>
@@ -246,11 +247,16 @@ function changeImgSet(imgSet, itemAmount, title) {
 }
 
 function loadNewSet(imgSet, itemAmount) {
+	$( "#gallery" ).load(window.location.href + " #gallery" );
 	var imgExists = true;
 	for(let i = 1; imgExists && i <= itemAmount; i++){
 		addBox(imgSet, i);
 	}
-	observer.observe();
+}
+
+function updateDiv()
+{ 
+    
 }
 
 function addBox(imgSet, imgNumber) {
@@ -269,7 +275,6 @@ function addBox(imgSet, imgNumber) {
 
 	newBox.appendChild(newBoxImg);
 	gallery.appendChild(newBox);
-	observer.observe();
 	// Cant do anything to actually change anything outside this function or stop it,
 	// newBoxImg.onerror = function(){
 	// 	imgExists = false;
