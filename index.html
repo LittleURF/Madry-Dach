@@ -224,34 +224,10 @@
 </script>
 <script src="js/lightbox.js"></script>
 <script>
-	window.onload = function() {
-
-		const gallery = document.getElementById('gallery__photos');
+const gallery = document.getElementById('gallery__photos');
 const sectionTitle = document.getElementById('photos__title');
 const list = document.getElementById('listJS');
 const chooseWorkBtn = document.getElementById('dropdown__trigger');
-
-
-
-
-
-
-
-$(document).ready(function() {
-
-$("#refresh").click(function() {
-	 $("#gallery").load("index.html");
-
-return false;
-});
-});
-
-
-
-
-
-
-
 
 // VV This here makes mobile works list appear on click/hover
 chooseWorkBtn.addEventListener('click', function(){list.style="";});
@@ -274,7 +250,15 @@ function loadNewSet(imgSet, itemAmount) {
 	for(let i = 1; imgExists && i <= itemAmount; i++){
 		addBox(imgSet, i);
 	}
-	observer.observe();
+	$(document).ready(function() {
+
+$("#refresh").click(function() {
+	 $("#gallery").load("index.html");
+
+return false;
+});
+});
+
 }
 
 function addBox(imgSet, imgNumber) {
@@ -304,9 +288,6 @@ function clearGallery() {
 	while (gallery.firstChild) {
     gallery.removeChild(gallery.firstChild);
 }
-}z
-
-};
-
+}
 </script>
 </html>
