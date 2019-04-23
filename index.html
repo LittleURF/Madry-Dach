@@ -129,11 +129,11 @@
 		<div class="gallery__photos-wrapper">
 			<h2 id="photos__title"></h2>
 			<div id="gallery__photos">
-				<a class="gallery__photo lozad" data-lightbox="prace" href="Images/Gallery/1/1.jpg"><img src="Images/Gallery/1/1.jpg" alt="Praca pokazowa"></a>
-				<a class="gallery__photo lozad" data-lightbox="prace" href="Images/Gallery/2/1.jpg"><img src="Images/Gallery/2/1.jpg" alt="Praca pokazowa"></a>
-				<a class="gallery__photo lozad" data-lightbox="prace" href="Images/Gallery/3/1.jpg"><img src="Images/Gallery/3/1.jpg" alt="Praca pokazowa"></a>
-				<a class="gallery__photo lozad" data-lightbox="prace" href="Images/Gallery/4/1.jpg"><img src="Images/Gallery/4/1.jpg" alt="Praca pokazowa"></a>
-				<a class="gallery__photo lozad" data-lightbox="prace" href="Images/Gallery/5/1.jpg"><img src="Images/Gallery/5/1.jpg" alt="Praca pokazowa"></a>
+				<a class="gallery__photo lozad" data-lightbox="prace" href="Images/Gallery/1/1.jpg"><img content-type="image/jpeg" src="Images/Gallery/1/1.jpg" alt="Praca pokazowa"></a>
+				<a class="gallery__photo lozad" data-lightbox="prace" href="Images/Gallery/2/1.jpg"><img content-type="image/jpeg" src="Images/Gallery/2/1.jpg" alt="Praca pokazowa"></a>
+				<a class="gallery__photo lozad" data-lightbox="prace" href="Images/Gallery/3/1.jpg"><img content-type="image/jpeg" src="Images/Gallery/3/1.jpg" alt="Praca pokazowa"></a>
+				<a class="gallery__photo lozad" data-lightbox="prace" href="Images/Gallery/4/1.jpg"><img content-type="image/jpeg" src="Images/Gallery/4/1.jpg" alt="Praca pokazowa"></a>
+				<a class="gallery__photo lozad" data-lightbox="prace" href="Images/Gallery/5/1.jpg"><img content-type="image/jpeg" src="Images/Gallery/5/1.jpg" alt="Praca pokazowa"></a>
 			</div>
 		</div>
 
@@ -260,13 +260,16 @@ function addBox(imgSet, imgNumber) {
 	newBox.className = "gallery__photo lozad";
 	newBox.setAttribute('data-lightbox', 'prace');
 	newBox.setAttribute('alt', 'Praca pokazowa');
+	newBox.setAttribute('content-type', 'image/jpeg');
+	newBox.setAttribute('content-length', '300000');
+	
 
 	let newBoxImg = document.createElement('img');
 	newBoxImg.src = imgUrl; 
 
 	newBox.appendChild(newBoxImg);
 	gallery.appendChild(newBox);
-	
+	observer.observe();
 	// Cant do anything to actually change anything outside this function or stop it,
 	// newBoxImg.onerror = function(){
 	// 	imgExists = false;
