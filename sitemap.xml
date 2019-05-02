@@ -16,19 +16,6 @@ xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitem
 
 </url>  
 
-<url>
-
-    <loc>http://www.madrydach.pl/.header-main</loc>
-
-
-
-    <lastmod>2019-04-21</lastmod>
-
-    <changefreq>monthly</changefreq>
-
-    <priority>1.0</priority>
-
-</url>  
 
 <url>
 
@@ -44,46 +31,5 @@ xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitem
 
 </url>  
 
-<url>
-
-    <loc>http://www.madrydach.pl/.about-us</loc>
-
-
-
-    <lastmod>2019-04-21</lastmod>
-
-    <changefreq>monthly</changefreq>
-
-    <priority>1.0</priority>
-
-</url>  
-
-<url>
-
-    <loc>http://www.madrydach.pl/.our-works</loc>
-
-
-
-    <lastmod>2019-04-21</lastmod>
-
-    <changefreq>monthly</changefreq>
-
-    <priority>1.0</priority>
-
-</url>  
-
-<url>
-
-    <loc>http://www.madrydach.pl/.contact</loc>
-
-
-
-    <lastmod>2019-04-21</lastmod>
-
-    <changefreq>monthly</changefreq>
-
-    <priority>1.0</priority>
-
-</url>  
 
 </urlset>
